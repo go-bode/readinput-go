@@ -1,7 +1,11 @@
 package main
 
-import "fmt"
-import "os"
+import (
+	"fmt"
+	"os"
+
+	"github.com/fatih/color"
+)
 
 func main() {
 	fmt.Println("Press some key...")
@@ -23,11 +27,12 @@ func readInput() {
 
 	switch input {
 	case "h":
-		fmt.Println(os.Hostname())
+		color.Cyan(os.Hostname())
 	case "e":
 		os.Exit(2)
 	case "t":
-		fmt.Println(os.TempDir())
+		fmt.Println("The OS Temp dir is --> ")
+		color.Cyan(os.TempDir())
 	default:
 		fmt.Println("padrão")
 	}
