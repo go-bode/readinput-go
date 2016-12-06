@@ -8,7 +8,6 @@ import (
 )
 
 func main() {
-	fmt.Println("Press some key...")
 	for {
 		readInput()
 	}
